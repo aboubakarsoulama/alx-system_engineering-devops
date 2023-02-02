@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-"""Contains Function to query subscribers on a given Reddit subreddit."""
+"""Contains top_ten function"""
 import requests
 
 
 def top_ten(subreddit):
-    """prints the titles of the first 10 hot
-       posts listed for a given subreddit."""
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
+    """Print the titles of the 10 hottest posts on a given subreddit."""
+    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
     headers = {
-        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_\
-        64; rv:15.0) Gecko/20100101 Firefox/15.0.1"
+        "User-Agent": "0x16-api_advanced:project:\
+v1.0.0 (by /u/firdaus_cartoon_jr)"
     }
     params = {
         "limit": 10
